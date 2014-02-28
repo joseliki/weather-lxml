@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>EL TIEMPO EN ANDALUCIA</title>
+</head>
+{% block body %}
+<h1>EL TIEMPO EN ANDALUCIA</h1>
+{% set cont = 0 %}
+{% for i in provincias %}
+<h3>{{ i }}</h3>
+<ul>
+<li>temperatura minima prevista:{{ temp_min[cont] }}C</li>
+<li>temperatura maxima prevista:{{ temp_max[cont] }}C</li>
+<li>velocidad del viento: {{ wind[cont] }} km/h</li>
+</ul>
+{% set cont = cont + 1 %}
+{% endfor %}
+{% endblock %}
